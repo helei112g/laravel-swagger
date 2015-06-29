@@ -1,8 +1,7 @@
 {
     "name": "riverslei/swaggervel",
     "description": "A great way to integrate Swagger into Laravel",
-    "keywords": ["laravel", "swagger", "l4", "l5", "documentation", "api"],
-    "version": "5.0.0",
+    "keywords": ["laravel", "swagger", "laravel5", "swagger-php", "documentation", "api"],
     "license": "MIT",
     "authors": [
         {
