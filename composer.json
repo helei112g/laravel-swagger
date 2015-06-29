@@ -1,6 +1,6 @@
 {
     "name": "riverslei/swaggervel",
-    "description": "A great way to integrate Swagger into Laravel",
+    "description": "在laravel5中使用swagger自动生成api接口文档",
     "keywords": ["laravel", "swagger", "laravel5", "swagger-php", "documentation", "api"],
     "license": "MIT",
     "authors": [
