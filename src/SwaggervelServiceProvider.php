@@ -22,7 +22,7 @@ class SwaggervelServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/swaggervel.php' => config_path('swaggervel.php'),
+            __DIR__.'/../config/swaggervel.php' => config_path('swaggervel.php'),
         ]);
 
         $this->publishes([
@@ -30,10 +30,10 @@ class SwaggervelServiceProvider extends ServiceProvider
         ], 'public');
 
 
-        $this->loadViewsFrom(__DIR__.'/views', 'swaggervel');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'swaggervel');
 
         $this->publishes([
-            __DIR__.'/views' => base_path('resources/views/vendor/swaggervel'),
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/swaggervel'),
         ]);
     }
     /**
@@ -44,7 +44,7 @@ class SwaggervelServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/swaggervel.php', 'swaggervel'
+            __DIR__.'/../config/swaggervel.php', 'swaggervel'
         );
 
         require_once __DIR__ .'/routes.php';
