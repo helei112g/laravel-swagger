@@ -2,8 +2,8 @@
 
 use Swagger\Swagger;
 
-Route::any(Config::get('swaggervel.doc-route').'/{page?}', function($page='api-docs.json') {
-    $filePath = Config::get('swaggervel.doc-dir') . "/{$page}";
+Route::any(Config::get('swagger.doc-route').'/{page?}', function($page='api-docs.json') {
+    $filePath = Config::get('swagger.doc-dir') . "/{$page}";
 
     if (File::extension($filePath) === "") {
         $filePath .= ".json";
@@ -19,9 +19,9 @@ Route::any(Config::get('swaggervel.doc-route').'/{page?}', function($page='api-d
 });
 
 Route::get('api-docs', function() {
-    if (Config::get('swaggervel.generateAlways')) {
-        $appDir = base_path()."/".Config::get('swaggervel.app-dir');
-        $docDir = Config::get('swaggervel.doc-dir');
+    if (Config::get('swagger.generateAlways')) {
+        $appDir = base_path()."/".Config::get('swagger.app-dir');
+        $docDir = Config::get('swagger.doc-dir');
 
         if (!File::exists($docDir) || is_writable($docDir)) {
             // delete all existing documentation
@@ -31,10 +31,10 @@ Route::get('api-docs', function() {
 
             File::makeDirectory($docDir);
 
-            $defaultBasePath = Config::get('swaggervel.default-base-path');
-            $defaultApiVersion = Config::get('swaggervel.default-api-version');
-            $defaultSwaggerVersion = Config::get('swaggervel.default-swagger-version');
-            $excludeDirs = Config::get('swaggervel.excludes');
+            $defaultBasePath = Config::get('swagger.default-base-path');
+            $defaultApiVersion = Config::get('swagger.default-api-version');
+            $defaultSwaggerVersion = Config::get('swagger.default-swagger-version');
+            $excludeDirs = Config::get('swagger.excludes');
 
             $swagger = new Swagger($appDir, $excludeDirs);
 
@@ -67,7 +67,7 @@ Route::get('api-docs', function() {
         }
     }
 
-    if (Config::get('swaggervel.behind-reverse-proxy')) {
+    if (Config::get('swagger.behind-reverse-proxy')) {
         $proxy = Request::server('REMOTE_ADDR');
         Request::setTrustedProxies(array($proxy));
     }
@@ -76,10 +76,10 @@ Route::get('api-docs', function() {
     Blade::setContentTags('{{', '}}');
 
     //need the / at the end to avoid CORS errors on Homestead systems.
-    $response = response()->view('swaggervel::index', array(
+    $response = response()->view('swagger::index', array(
         'secure'         => Request::secure(),
-        'urlToDocs'      => url(Config::get('swaggervel.doc-route')),
-        'requestHeaders' => Config::get('swaggervel.requestHeaders') )
+        'urlToDocs'      => url(Config::get('swagger.doc-route')),
+        'requestHeaders' => Config::get('swagger.requestHeaders') )
     );
 
     //need the / at the end to avoid CORS errors on Homestead systems.
@@ -92,8 +92,8 @@ Route::get('api-docs', function() {
         200
     );*/
 
-    if (Config::has('swaggervel.viewHeaders')) {
-        foreach (Config::get('swaggervel.viewHeaders') as $key => $value) {
+    if (Config::has('swagger.viewHeaders')) {
+        foreach (Config::get('swagger.viewHeaders') as $key => $value) {
             $response->header($key, $value);
         }
     }
