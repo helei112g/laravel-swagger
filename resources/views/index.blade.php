@@ -10,28 +10,28 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 <head>
 	<title>HeLei API DOC</title>
 	<meta charset="utf-8">
-	<link rel="icon" type="image/png" href="{!! asset('/vendor/swaggervel/images/favicon-32x32.png') !!}" sizes="32x32" />
-	<link rel="icon" type="image/png" href="{!! asset('/vendor/swaggervel/images/favicon-16x16.png') !!}" sizes="16x16" />
-	<link href="{!! asset('/vendor/swaggervel/css/typography.css') !!}" media="screen" rel="stylesheet" type="text/css"/>
-	<link href="{!! asset('/vendor/swaggervel/css/reset.css') !!}" media="screen" rel="stylesheet" type="text/css"/>
-	<link href="{!! asset('/vendor/swaggervel/css/screen.css') !!}" media="screen" rel="stylesheet" type="text/css"/>
-	<link href="{!! asset('/vendor/swaggervel/css/reset.css') !!}" media="print" rel="stylesheet" type="text/css"/>
-	<link href="{!! asset('/vendor/swaggervel/css/print.css') !!}" media="print" rel="stylesheet" type="text/css"/>
+	<link rel="icon" type="image/png" href="{!! asset('/vendor/swagger/images/favicon-32x32.png') !!}" sizes="32x32" />
+	<link rel="icon" type="image/png" href="{!! asset('/vendor/swagger/images/favicon-16x16.png') !!}" sizes="16x16" />
+	<link href="{!! asset('/vendor/swagger/css/typography.css') !!}" media="screen" rel="stylesheet" type="text/css"/>
+	<link href="{!! asset('/vendor/swagger/css/reset.css') !!}" media="screen" rel="stylesheet" type="text/css"/>
+	<link href="{!! asset('/vendor/swagger/css/screen.css') !!}" media="screen" rel="stylesheet" type="text/css"/>
+	<link href="{!! asset('/vendor/swagger/css/reset.css') !!}" media="print" rel="stylesheet" type="text/css"/>
+	<link href="{!! asset('/vendor/swagger/css/print.css') !!}" media="print" rel="stylesheet" type="text/css"/>
 	
-	<script src="{!! asset('/vendor/swaggervel/lib/jquery-1.8.0.min.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/jquery.slideto.min.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/jquery.wiggle.min.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/jquery.ba-bbq.min.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/handlebars-2.0.0.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/underscore-min.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/backbone-min.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/swagger-ui.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/highlight.7.3.pack.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/marked.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lib/swagger-oauth.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/jquery-1.8.0.min.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/jquery.slideto.min.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/jquery.wiggle.min.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/jquery.ba-bbq.min.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/handlebars-2.0.0.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/underscore-min.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/backbone-min.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/swagger-ui.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/highlight.7.3.pack.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/marked.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lib/swagger-oauth.js') !!}" type="text/javascript"></script>
 	<!-- 语言包 -->
-	<script src="{!! asset('/vendor/swaggervel/lang/translator.js') !!}" type="text/javascript"></script>
-	<script src="{!! asset('/vendor/swaggervel/lang/zh-CN.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lang/translator.js') !!}" type="text/javascript"></script>
+	<script src="{!! asset('/vendor/swagger/lang/zh-CN.js') !!}" type="text/javascript"></script>
 	
 	{{--    {{ HTML::script('packages/jlapp/swaggervel/lib/swagger-oauth.js' , array(), $secure); !!}--}}
 
