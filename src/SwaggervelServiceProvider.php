@@ -35,6 +35,8 @@ class SwaggervelServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/vendor/swagger'),
         ]);
+		
+		require_once __DIR__ .'/routes.php';
     }
     /**
      * Register the service provider.
@@ -46,8 +48,6 @@ class SwaggervelServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/swagger.php', 'swagger'
         );
-
-        require_once __DIR__ .'/routes.php';
     }
 	
 	/**
