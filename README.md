@@ -3,7 +3,7 @@
 项目基于laravel5+swagger-php构成。[项目源地址](https://github.com/slampenny/Swaggervel)
 
 # 改进日志
-* 2015年7月1日 [v1.0.1] 修改路由
+* 2015年7月1日 [v1.1.0] 修改路由
 * 修改了项目文件结构
 * 将swagger前端部分版本提升到V2.1版本，使用swagger前端[项目地址](https://github.com/helei112g/swagger-ui)
 * 将项目改进为PSR-4自动加载，抛弃之前的PSR-0
