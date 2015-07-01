@@ -12,7 +12,7 @@ class SwaggervelServiceProvider extends ServiceProvider
      *
      * @var bool
      */
-    protected $defer = false;
+    protected $defer = true;
 
     /**
      * Bootstrap the application events.
@@ -48,6 +48,16 @@ class SwaggervelServiceProvider extends ServiceProvider
         );
 
         require_once __DIR__ .'/routes.php';
+    }
+	
+	/**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [];
     }
 
 }
