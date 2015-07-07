@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "zircote/swagger-php": "*"
+        "zircote/swagger-php": "~1.0"
     },
     "autoload": {
         "psr-4": {
