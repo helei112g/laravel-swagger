@@ -11,7 +11,7 @@
 
 # 安装
 建议采用 `composer` 进行安装，
- 1. 在项目的composer.json中配置 `"riverslei/laravel-swagger": "*"`
+ 1. 在项目的composer.json中配置 `"riverslei/laravel-swagger": "~1.0"`
  2. 运行 `composer update` 
  3. 安装完成后，配置 `config/app.php` 中的服务提供者 `Riverslei\Swaggervel\SwaggervelServiceProvider::class`
  4. 以上配置完成后，运行 `php artisan vendor:publish` ，生成相关的配置文件以及资源文件。
